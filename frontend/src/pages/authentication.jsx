@@ -127,34 +127,24 @@ export default function Authentication(){
                                 value={password}
                                 type="password"
                                 onChange={(e)=>setPassword(e.target.value)}
-
                                 id="password"
                             />
-
-                            <p style={{ color: "red" }}>{error}</p>
-
+                            <p style={{color:"red"}}>{error}</p>
                             <Button
                                 type="button"
                                 fullWidth
                                 variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
+                                sx={{mt:3,mb:2}}
                                 onClick={handleAuth}
                             >
-                                {formState === 0 ? "Login " : "Register"}
+                                {formState===0 ? "Login":"Register"}
                             </Button>
 
                         </Box>
                     </Box>
                 </Grid>
             </Grid>
-
-            <Snackbar
-
-                open={open}
-                autoHideDuration={4000}
-                message={message}
-            />
-
+            <Snackbar open={open} autoHideDuration={4000} message={message}/>
         </ThemeProvider>
     );
 }
